@@ -15,8 +15,7 @@ dependencies:
   #  r_upgrade: ^0.4.2
   r_upgrade:
     path: "plugins/r_upgrade-master"
-  #状态管理
-  provider: ^6.1.1
+
   # 权限申请-在window中会有问题
   permission_handler: ^12.0.1
   location: ^8.0.0
