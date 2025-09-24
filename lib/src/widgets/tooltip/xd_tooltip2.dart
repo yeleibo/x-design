@@ -85,7 +85,7 @@
 //   /// Creates a tooltip.
 //   ///
 //   /// By default, tooltips should adhere to the
-//   /// [Material specification](https://material.io/design/components/tooltips.html#spec).
+//   /// [Material specification](https://material.io/design/widgets/tooltips.html#spec).
 //   /// If the optional constructor parameters are not defined, the values
 //   /// provided by [TooltipTheme.of] will be used if a [TooltipTheme] is present
 //   /// or specified in [ThemeData].
@@ -557,7 +557,7 @@
 //     _tooltipTheme = TooltipTheme.of(context);
 //   }
 //
-//   // https://material.io/components/tooltips#specs
+//   // https://material.io/widgets/tooltips#specs
 //   double _getDefaultTooltipHeight() {
 //     return switch (Theme.of(context).platform) {
 //       TargetPlatform.macOS ||

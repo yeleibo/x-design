@@ -1,27 +1,27 @@
-export 'src/components/xd_app.dart';
-export 'src/components/button/index.dart';
-export 'src/components/select/index.dart';
-export 'src/components/tree/index.dart';
-export 'src/components/message/message.dart';
-export 'src/components/dialog/index.dart';
-export 'src/components/tooltip/index.dart';
-export 'src/components/image/index.dart';
-export 'src/components/form/index.dart';
-export 'src/components/input/index.dart';
-export 'src/components/watermark/watermark.dart';
-export 'src/components/pagination/index.dart';
-export 'src/components/signature/xd_signature.dart';
+export 'src/widgets/xd_app.dart';
+export 'src/widgets/button/index.dart';
+export 'src/widgets/select/index.dart';
+export 'src/widgets/tree/index.dart';
+export 'src/widgets/message/message.dart';
+export 'src/widgets/dialog/index.dart';
+export 'src/widgets/tooltip/index.dart';
+export 'src/widgets/image/index.dart';
+export 'src/widgets/form/index.dart';
+export 'src/widgets/input/index.dart';
+export 'src/widgets/watermark/watermark.dart';
+export 'src/widgets/pagination/index.dart';
+export 'src/widgets/signature/xd_signature.dart';
 export 'src/constants/no_animation_page_route.dart';
 export 'src/constants/my_icon.dart';
-export 'src/components/dialog/xd_dialog.dart';
-export 'src/components/menu/index.dart';
-export 'src/components/list/index.dart';
-export 'src/components/map/index.dart';
-export 'src/components/file/index.dart';
-export 'src/components/setting/index.dart';
-export 'src/components/input/xd_date_time_picker.dart';
-export 'src/components/input/datetime_picker.dart';
-export 'src/components/network_request/index.dart';
+export 'src/widgets/dialog/xd_dialog.dart';
+export 'src/widgets/menu/index.dart';
+export 'src/widgets/list/index.dart';
+export 'src/widgets/map/index.dart';
+export 'src/widgets/file/index.dart';
+export 'src/widgets/setting/index.dart';
+export 'src/widgets/input/xd_date_time_picker.dart';
+export 'src/widgets/input/datetime_picker.dart';
+export 'src/widgets/network_request/index.dart';
 
 //export them
 export 'src/theme/theme.dart';
@@ -32,7 +32,7 @@ export 'src/theme/theme.dart';
 export 'src/core/index.dart';
 
 //window
-export 'src/components/window_caption_tools/window_caption_tools.dart';
+export 'src/widgets/window_caption_tools/window_caption_tools.dart';
 
 
 

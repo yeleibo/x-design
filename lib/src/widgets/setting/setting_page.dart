@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:x_design/src/components/setting/index.dart';
+import 'package:x_design/src/widgets/setting/index.dart';
 
 import '../../../l10n/intl/xd_localizations.dart';
 

@@ -6,7 +6,8 @@ import 'package:r_upgrade/r_upgrade.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../xd_design.dart';
-import '../components/update_dialog/update_dialog.dart';
+import '../widgets/message/message.dart';
+import '../widgets/update_dialog/update_dialog.dart';
 
 class ApplicationUtil {
   ///检查软件更新

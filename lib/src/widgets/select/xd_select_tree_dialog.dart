@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:x_design/src/components/dialog/xd_dialog.dart';
+import 'package:x_design/src/widgets/dialog/xd_dialog.dart';
 import 'package:x_design/src/utils/extension/iterable_extension.dart';
 
 import '../../../xd_design.dart';

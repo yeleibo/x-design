@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:x_design/src/components/map/index.dart';
+import 'package:x_design/src/widgets/map/index.dart';
 
 class XDMapBaseMapLayer extends StatelessWidget {
   final XDMapLayersManageController layersManageController;

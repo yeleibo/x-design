@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as image_lib;
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
-import 'package:x_design/src/components/xd_app.dart';
+import 'package:x_design/src/widgets/xd_app.dart';
 import 'dart:ui' as ui;
 import 'package:x_design/src/utils/file_util.dart';
 
-import '../components/image/image_view_dialog.dart';
+import '../widgets/image/image_view_dialog.dart';
 import 'dart:io';
 class XDImageUtil {
   ///给图片添加文字水印

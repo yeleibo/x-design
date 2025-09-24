@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:x_design/src/components/button/index.dart';
+import 'package:x_design/src/widgets/button/index.dart';
 
 import '../../../xd_design.dart';
 

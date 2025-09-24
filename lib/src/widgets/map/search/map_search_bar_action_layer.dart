@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:x_design/src/components/button/index.dart';
-import 'package:x_design/src/components/map/search/map_search_controller.dart';
-import 'package:x_design/src/components/message/message.dart';
+import 'package:x_design/src/widgets/button/index.dart';
+import 'package:x_design/src/widgets/map/search/map_search_controller.dart';
+import 'package:x_design/src/widgets/message/message.dart';
 import 'package:x_design/src/services/data_cache_service.dart';
 import 'package:x_design/src/core/global.dart';
 

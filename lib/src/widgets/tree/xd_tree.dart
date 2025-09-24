@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'type.dart';
 
-///https://tdesign.tencent.com/vue/components/tree
-///https://ant.design/components/tree-cn
+///https://tdesign.tencent.com/vue/widgets/tree
+///https://ant.design/widgets/tree-cn
 
 class XDTree<T> extends StatefulWidget {
   final List<TreeDataType<T>> treeData;

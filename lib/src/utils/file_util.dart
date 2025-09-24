@@ -12,7 +12,7 @@ import 'package:http/http.dart' as http;
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
 import '../../xd_design.dart';
-import '../components/file/files_viewer.dart';
+import '../widgets/file/files_viewer.dart';
 
 class XDFileUtil {
   static Future<String?> uploadFile(

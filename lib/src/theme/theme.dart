@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:x_design/src/components/xd_app.dart';
+import 'package:x_design/src/widgets/xd_app.dart';
 
 /// 自定义的主题数据
 /// theme:ThemeData.light().copyWith(

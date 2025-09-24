@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:x_design/src/components/setting/language/language_controller.dart';
+import 'package:x_design/src/widgets/setting/language/language_controller.dart';
 
 import '../../../../l10n/intl/xd_localizations.dart';
 

@@ -1,4 +1,4 @@
-import 'package:x_design/src/components/pagination/pagination_result.dart';
+import 'package:x_design/src/widgets/pagination/pagination_result.dart';
 
 
 class XDTablePaginationConfig{
