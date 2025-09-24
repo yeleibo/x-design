@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:x_design/src/widgets/xd_app.dart';
 
 ///默认使用的时[MaterialApp]提供了一个默认的[Overlay],弹窗位置是相对与[Overlay]来的
 ///可以在组件外面包裹一个[Overlay]组件,然后在[Overlay]组件里面使用[OverlayEntry]来实现弹窗
@@ -31,8 +32,12 @@ Message message = Message();
 const Duration _messageDefaultDuration = Duration(milliseconds: 3000);
 ///通过navigator的context作为全局context,调用具体的弹窗可以使用具体的context
 class Message {
+  // final _fToast = FToast();
+
   ///单例模式
-  Message._internal();
+  Message._internal(){
+    // _fToast.init(xdContext);
+  }
   factory Message() => _instance;
   static final Message _instance = Message._internal();
 
@@ -75,6 +80,7 @@ class Message {
         BuildContext? context,
       Duration duration =_messageDefaultDuration,
       Function? onClose}) async {
+
   }
 
   Future<void> destroy({Key? key}) async {
