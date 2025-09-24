@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(del \"lib\\src\\widgets\\list\\pagination_list\\list_page_bloc.dart\")",
+      "Bash(del \"lib\\src\\widgets\\list\\pagination_list\\list_page_event.dart\")",
+      "Bash(del \"lib\\src\\widgets\\list\\pagination_list\\list_page_state.dart\")",
+      "Bash(rm:*)",
+      "Bash(flutter analyze:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
