@@ -1,0 +1,208 @@
+{
+  "@@locale": "en",
+
+  "search": "Search",
+  "@search": {
+    "description": "查询"
+  },
+
+  "reset": "Reset",
+  "@reset": {
+    "description": "重置"
+  },
+
+  "login": "Login",
+  "@login": {
+    "description": "登录"
+  },
+
+
+  "pleaseEnterPassword": "please enter password",
+  "@pleaseEnterPassword": {
+    "description": "请输入密码"
+  },
+
+  "pleaseEnterUserName": "please enter user name",
+  "@pleaseEnterUserName": {
+
+    "description": "请输入用户名"
+  },
+  "pleaseEnter": "Please Enter",
+  "@pleaseEnter": {
+    "description": "请输入"
+  },
+
+  "suggestBrowserTip1": "It is recommended to use ",
+  "@suggestBrowserTip1": {
+    "description": "推荐使用"
+  },
+  "suggestBrowserTip2": " latest Microsoft Edge ",
+  "@suggestBrowserTip2": {
+    "description": "新版 Microsoft Edge 浏览器"
+  },
+  "suggestBrowserTip3": " to access this system ",
+  "@suggestBrowserTip3": {
+    "description": "访问本系统"
+  },
+  "undo": "undo",
+  "@undo": {
+    "description": "撤销"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "取消"
+  },
+  "confirm": "Confirm",
+  "@confirm": {
+    "description": "确定"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete"
+  },
+  "selected": "Selected",
+  "@selected": {
+    "description": "已选"
+  },
+  "clearList": "Clear List",
+  "@clear": {
+    "description": "清空列表"
+  },
+  "total": "Total",
+  "@total": {
+    "description": "合计"
+  },
+  "location": "Location",
+  "@location": {
+    "description": "定位"
+  },
+  "getFailed": "Get Failed",
+  "@getFailed": {
+    "description": "获取失败"
+  },
+  "networkError": "Network Error",
+  "@networkError": {
+    "description": "网络错误"
+  },
+  "upload": "Upload",
+  "@upload": {
+    "description": "上传"
+  },
+  "rotate": "Rotate 90 degrees",
+  "@rotate": {
+    "description": "旋转90度"
+  },
+  "rename": "Rename",
+  "@rename": {
+    "description": "重命名"
+  },
+  "pleaseEnterANewName": "Please enter a new name",
+  "@pleaseEnterANewName": {
+    "description": "重命名"
+  },
+  "inputCannotBeEmpty": "Input cannot be empty",
+  "@inputCannotBeEmpty": {
+    "description": "输入不能为空"
+  },
+  "zoomIn": "ZoomIn",
+  "@zoomIn": {
+    "description": "放大"
+  },
+  "zoomOut": "ZoomOut",
+  "@zoomOut": {
+    "description": "缩小"
+  },
+  "detail": "Detail",
+  "@detail": {
+    "description": "详情"
+  },
+
+  "noNewVersion": "no new version",
+  "@noNewVersion": {
+    "description": "没有新版本"
+  },
+  "ignoreThisVersion": "ignore this version",
+  "@ignoreThisVersion": {
+    "description": "忽略这个版本"
+  },
+  "update": "update",
+  "@update": {
+    "description": "更新"
+  },
+  "appUpdateAsk": "Check a new version",
+  "@appUpdateAsk": {
+    "description": "检查到新版本"
+  },
+  "myPosition": "my position",
+  "@myPosition": {
+    "description": "我的位置"
+  },
+  "mapCenter": "mapCenter",
+  "@mapCenter": {
+    "description": "mapCenter"
+  },
+  "pleaseEnterTheQueryKeywordFirst": "Please enter the query keyword first",
+  "@pleaseEnterTheQueryKeywordFirst": {
+    "description": "请先输入查询关键字"
+  },
+  "keyword": "keyword",
+  "@keyword": {
+    "description": "关键字"
+  },
+  "language": "language",
+  "@language": {
+    "description": "语言"
+  },
+  "theme": "theme",
+  "@theme": {
+    "description": "主题"
+  },
+  "setting": "setting",
+  "@setting": {
+    "description": "设置"
+  },
+  "installMapApp": "please install map app",
+  "@installMapApp": {
+    "description": "请先安装地图软件"
+  },
+  "layers": "layers",
+  "@layers": {
+    "description": "图层"
+  },
+  "releaseToRefresh": "Release to refresh",
+  "@ReleaseToRefresh": {
+    "description": "松手刷新"
+  },
+  "startRefreshing": "Start refreshing",
+  "@StartRefreshing": {
+    "description": "开始刷新"
+  },
+  "refreshing": "Refreshing",
+  "@Refreshing": {
+    "description": "刷新中"
+  },
+  "processing": "Processing",
+  "@processing": {
+    "description": "正在加载中"
+  },
+  "refreshSuccessful": "Refresh successful",
+  "@RefreshSuccessful": {
+    "description": "刷新成功"
+  },
+  "loadingCompleted": "Loading completed",
+  "@loadingCompleted": {
+    "description": "加载完成"
+  },
+  "refreshFailed": "Refresh failed",
+  "@RefreshFailed": {
+    "description": "刷新失败"
+  },
+  "noMore": "No More",
+  "@NoMore": {
+    "description": "没有更多数据"
+  },
+  "pageNumber":"/page",
+  "@pageNumber": {
+    "description": "页数"
+  }
+}

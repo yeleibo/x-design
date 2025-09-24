@@ -1,0 +1,14 @@
+# 翻译文件的目录
+arb-dir: lib/l10n/arb
+#  指定用作模板的默认语言的 ARB 文件
+template-arb-file: intl_en.arb
+# 生成的本地化 Dart 文件的输出路径
+output-localization-file: xd_localizations.dart
+# 指定生成的本地化 Dart 类的名称
+output-class: XDLocalizations
+# 生成文件存放的文件夹位置
+output-dir: lib/l10n/intl
+# false:直接生成到output-dir里面，true->作为一个单独的包（.dart_tool/flutter_gen/gen_l10n/）将生成的文件放到output-dir里面
+synthetic-package: false
+# Localizations.of(context)是否可为空
+nullable-getter: false

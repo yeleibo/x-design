@@ -1,0 +1,134 @@
+name: x_design
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  amap_flutter_location:
+    path: ./plugins/amap_flutter_location-3.0.0
+
+  #更新
+  #  r_upgrade: ^0.4.2
+  r_upgrade:
+    path: "plugins/r_upgrade-master"
+  #状态管理
+  provider: ^6.1.1
+  # 权限申请-在window中会有问题
+  permission_handler: ^12.0.1
+  location: ^8.0.0
+  #定位
+  geolocator: ^14.0.0
+
+  #指南针
+  flutter_compass: ^0.8.1
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  syncfusion_flutter_datepicker: ^31.1.21
+
+  #数字处理
+  decimal: ^3.0.2
+  #刷新
+  easy_refresh: ^3.4.0
+  # 打印,pdf预览,会造成打印组件下载缓慢
+#  printing: ^5.11.0
+  #手机端pdf预览
+#  flutter_pdfview: ^1.3.1
+  url_launcher: ^6.1.12
+  # 画布
+  signature: ^6.3.0
+  http: ^1.2.0
+  #web端适配
+  universal_html: ^2.2.3
+  #文件选择
+  file_picker: ^10.3.3
+  # 经纬度
+  latlong2: ^0.9.0
+  #网络请求
+  dio: ^5.8.0+1
+  #json相关
+  json_annotation: ^4.0.1
+
+
+  # 依赖注入
+  get_it: ^8.2.0
+  # 数据缓存
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+  # 日志
+  logger: ^2.0.2+1
+
+  # 路径
+  path: ^1.8.3
+
+  path_provider: ^2.1.1
+#  # 权限申请-在window中会有问题
+#  permission_handler: ^11.0.1
+  #地图
+  flutter_map: ^8.2.1
+  flutter_map_animations: ^0.9.0
+  #多边形编辑器
+  flutter_map_line_editor: ^8.0.0
+
+  #日期时间选择
+  omni_datetime_picker: ^2.3.1
+  image: ^4.1.4
+  #文件打开
+  open_file: ^3.5.10
+  #x,y轴滚动
+#  two_dimensional_scrollables: ^0.0.5
+  #展开或折叠组件
+  expandable: ^5.0.1
+  #svg
+  flutter_svg: ^2.0.5
+  #图片选择
+  wechat_assets_picker: ^9.5.0
+  wechat_camera_picker: ^4.3.7
+  #打开地图
+  map_launcher: ^4.4.2
+  # 视频播放
+  video_player: ^2.9.5
+  # 地图缓存
+  flutter_map_tile_caching: ^10.1.1
+  #检测是否有网络
+  internet_connection_checker_plus: ^2.8.0
+dev_dependencies:
+  flutter_localizations:
+    sdk: flutter
+  flutter_test:
+    sdk: flutter
+  # 代码规范
+  flutter_lints: any
+  build_runner: any
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+flutter:
+  generate: true
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/images/map/
+    - assets/images/map/layer_button/
+    - assets/images/map/base_layer/
+
+
+  fonts:
+    - family: XDIcons
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+
+
+flutter_gen:
+  output: lib/gen/
+flutter_intl:
+  enabled: true

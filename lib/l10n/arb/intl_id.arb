@@ -1,0 +1,206 @@
+{
+  "@@locale": "id",
+
+  "search": "Menanyakan",
+  "@search": {
+    "description": "查询"
+  },
+
+  "reset": "Mengatur Ulang",
+  "@reset": {
+    "description": "重置"
+  },
+
+  "login": "Gabung",
+  "@login": {
+    "description": "登录"
+  },
+  "pleaseEnterPassword": "Silakan Masukkan Kata Sandi",
+  "@pleaseEnterPassword": {
+    "description": "请输入密码"
+  },
+
+  "pleaseEnterUserName": "Silakan Masukkan Nama Pengguna",
+  "@pleaseEnterUserName": {
+    "description": "请输入用户名"
+  },
+  "pleaseEnter": "Silakan Masuk",
+  "@pleaseEnter": {
+    "description": "请输入"
+  },
+
+  "suggestBrowserTip1":  "Penggunaan Yang Disarankan",
+  "@suggestBrowserTip1": {
+    "description": "推荐使用"
+  },
+  "suggestBrowserTip2": "Versi Baru Peramban Microsoft Edge",
+  "@suggestBrowserTip2": {
+    "description": "新版 Microsoft Edge 浏览器"
+  },
+  "suggestBrowserTip3":   "Kunjungi Sistem Ini",
+  "@suggestBrowserTip3": {
+    "description": "访问本系统"
+  },
+  "suggestBrowserTip4":   "test",
+  "@suggestBrowserTip4": {
+    "description": "访问本系统"
+  },
+  "undo": "Membatalkan",
+  "@undo": {
+    "description": "撤销"
+  },
+  "cancel": "Membatalkan",
+  "@cancel": {
+    "description": "取消"
+  },
+  "confirm": "Tentu",
+  "@confirm": {
+    "description": "确定"
+  },
+  "delete": "Menghapus",
+  "@delete": {
+    "description": "删除"
+  },
+  "selected": "Terpilih",
+  "@selected": {
+    "description": "已选"
+  },
+  "clearList": "Bersihkan Daftarnya",
+  "@clear": {
+    "description": "清空列表"
+  },
+  "total": "Total",
+  "@total": {
+    "description": "合计"
+  },
+  "location": "Posisi",
+  "@location": {
+    "description": "定位"
+  },
+  "getFailed": "Gagal Memperoleh",
+  "@getFailed": {
+    "description": "获取失败"
+  },
+  "networkError": "Kesalahan Jaringan",
+  "@networkError": {
+    "description": "网络错误"
+  },
+  "upload": "Mengunggah",
+  "@upload": {
+    "description": "上传"
+  },
+  "rotate": "Putar 90 derajat",
+  "@rotate": {
+    "description": "旋转90度"
+  },
+  "rename": "menamakan semula",
+  "@rename": {
+    "description": "重命名"
+  },
+  "pleaseEnterANewName": "Sila masukkan nama baharu",
+  "@pleaseEnterANewName": {
+    "description": "请输入新的名称"
+  },
+  "inputCannotBeEmpty": "Input tidak boleh kosong",
+  "@inputCannotBeEmpty": {
+    "description": "输入不能为空"
+  },
+  "zoomIn": "Memperbesar",
+  "@zoomIn": {
+    "description": "放大"
+  },
+  "zoomOut": "Memperkecil",
+  "@zoomOut": {
+    "description": "缩小"
+  },
+  "detail": "Detail",
+  "@detail": {
+    "description": "详情"
+  },
+  "noNewVersion": "Tidak Ada Versi Baru",
+  "@noNewVersion": {
+    "description": "没有新版本"
+  },
+  "ignoreThisVersion": "Abaikan Versi Ini",
+  "@ignoreThisVersion": {
+    "description": "忽略这个版本"
+  },
+  "update": "Memperbarui",
+  "@update": {
+    "description": "更新"
+  },
+  "appUpdateAsk": "Periksa Versi Baru",
+  "@appUpdateAsk": {
+    "description": "检查到新版本"
+  },
+  "myPosition": "Posisi Saya",
+  "@myPosition": {
+    "description": "我的位置"
+  },
+  "mapCenter": "Pusat Peta",
+  "@mapCenter": {
+    "description": "地图中心"
+  },
+
+  "pleaseEnterTheQueryKeywordFirst": "Silakan Masukkan Kata Kunci Kueri Terlebih Dahulu",
+  "@pleaseEnterTheQueryKeywordFirst": {
+    "description": "请先输入查询关键字"
+  },
+  "keyword": "Kata Kunci",
+  "@keyword": {
+    "description": "关键字"
+  },
+  "language": "Bahasa",
+  "@language": {
+    "description": "语言"
+  },
+  "theme": "Tema",
+  "@theme": {
+    "description": "主题"
+  },
+  "setting": "Mempersiapkan",
+  "@setting": {
+    "description": "设置"
+  },
+  "installMapApp": "Silakan Instal Perangkat Lunak Peta Terlebih Dahulu",
+  "@installMapApp": {
+    "description": "请先安装地图软件"
+  },
+  "layers": "Lapisan",
+  "@layers": {
+    "description": "图层"
+  },
+  "releaseToRefresh": "Lepaskan Untuk Menyegarkan",
+  "@ReleaseToRefresh": {
+    "description": "松手刷新"
+  },
+  "startRefreshing": "Mulailah Menyegarkan",
+  "@StartRefreshing": {
+    "description": "开始刷新"
+  },
+  "refreshing": "Menyegarkan",
+  "@Refreshing": {
+    "description": "刷新中"
+  },
+  "refreshSuccessful": "Penyegaran Berhasil",
+  "@RefreshSuccessful": {
+    "description": "刷新成功"
+  },
+  "loadingCompleted": "Pemuatan Selesai",
+  "@loadingCompleted": {
+    "description": "加载完成"
+  },
+  "refreshFailed": "Penyegaran Gagal",
+  "@RefreshFailed": {
+    "description": "刷新失败"
+  },
+
+  "noMore": "Tidak Ada Data Lagi",
+  "@NoMore": {
+    "description": "没有更多数据"
+  },
+  "pageNumber":"/halaman",
+  "@pageNumber": {
+    "description": "页数"
+  }
+}
