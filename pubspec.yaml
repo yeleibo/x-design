@@ -86,8 +86,8 @@ dependencies:
   #svg
   flutter_svg: ^2.0.5
   #图片选择
-  wechat_assets_picker: ^9.5.0
-  wechat_camera_picker: ^4.3.7
+  wechat_assets_picker: ^9.8.0
+  wechat_camera_picker: ^4.4.0
   #打开地图
   map_launcher: ^4.4.2
   # 视频播放
