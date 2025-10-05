@@ -12,7 +12,6 @@ class LocationServiceImplementByAMap with LocationBase implements LocationServic
   final AMapFlutterLocation _locationPlugin = AMapFlutterLocation();
   final String gaodeMapKeyOfAndroid;
   final String gaodeMapKeyOfIos;
-  XDLocation? lastPosition;
 
   bool inited=false;
 
@@ -50,10 +49,12 @@ class LocationServiceImplementByAMap with LocationBase implements LocationServic
           var latitude = Platform.isAndroid?result['latitude'] as double:double.tryParse(result['latitude'] as String);
           if(latitude!=null && longitude!=null){
             var w84=XDLatLngTransformUtil.gcj02ToGps84(LatLng(latitude, longitude));
-            lastPosition=XDLocation(
+            var lastPosition=XDLocation(
                 latitude: w84.latitude,
                 longitude: w84.longitude);
-            streamController.add(lastPosition!);
+            dataCacheService.saveData("lastPositionLongitude", lastPosition.longitude);
+            dataCacheService.saveData("lastPositionLatitude", lastPosition.latitude);
+            streamController.add(lastPosition);
 
           }
         }
@@ -116,7 +117,10 @@ class LocationServiceImplementByAMap with LocationBase implements LocationServic
 
   @override
   XDLocation? getLastPosition() {
-    return lastPosition;
+    var latitude=  dataCacheService.getDataByDataName("lastPositionLatitude");
+    var longitude= dataCacheService.getDataByDataName("lastPositionLongitude");
+
+    return latitude!=null && longitude!=null? XDLocation(latitude:latitude, longitude:longitude):null;
   }
 
 }
