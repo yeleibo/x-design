@@ -1,4 +1,4 @@
-#import <Flutter/Flutter.h>
+﻿#import <Flutter/Flutter.h>
 
 @interface AMapFlutterLocationPlugin : NSObject<FlutterPlugin>
 @end

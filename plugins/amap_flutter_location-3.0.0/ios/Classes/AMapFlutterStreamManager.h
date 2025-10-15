@@ -1,4 +1,4 @@
-//
+﻿//
 //  AMapFlutterStreamManager.h
 //  amap_location_flutter_plugin
 //

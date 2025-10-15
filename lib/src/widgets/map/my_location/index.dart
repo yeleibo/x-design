@@ -2,7 +2,7 @@
 export 'my_location_controller.dart';
 export 'my_position_latlng_layer.dart';
 export 'my_postion_mark_layer.dart';
-
+export 'my_location_move_to_map_center_action_layer.dart';
 
 
 import 'package:flutter/widgets.dart';
