@@ -206,5 +206,9 @@
   "pageNumber":"条/页",
   "@pageNumber": {
     "description": "页数"
+  },
+  "pleaseOpenLocationService": "请开启定位服务",
+  "@pleaseOpenLocationService": {
+    "description": "请开启定位服务"
   }
 }

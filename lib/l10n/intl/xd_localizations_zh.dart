@@ -154,6 +154,9 @@ class XDLocalizationsZh extends XDLocalizations {
 
   @override
   String get pageNumber => '条/页';
+
+  @override
+  String get pleaseOpenLocationService => '请开启定位服务';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -306,4 +309,7 @@ class XDLocalizationsZhTw extends XDLocalizationsZh {
 
   @override
   String get pageNumber => '條/頁';
+
+  @override
+  String get pleaseOpenLocationService => '請開啟定位服務';
 }

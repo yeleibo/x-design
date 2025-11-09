@@ -155,4 +155,7 @@ class XDLocalizationsEn extends XDLocalizations {
 
   @override
   String get pageNumber => '/page';
+
+  @override
+  String get pleaseOpenLocationService => 'Please open location service';
 }

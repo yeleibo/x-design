@@ -156,4 +156,7 @@ class XDLocalizationsId extends XDLocalizations {
 
   @override
   String get pageNumber => '/halaman';
+
+  @override
+  String get pleaseOpenLocationService => 'Silakan Buka Layanan Lokasi';
 }

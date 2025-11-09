@@ -6,7 +6,9 @@
       "Bash(del \"lib\\src\\widgets\\list\\pagination_list\\list_page_state.dart\")",
       "Bash(rm:*)",
       "Bash(flutter analyze:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(flutter pub run build_runner build:*)",
+      "Bash(flutter gen-l10n:*)"
     ],
     "deny": [],
     "ask": []

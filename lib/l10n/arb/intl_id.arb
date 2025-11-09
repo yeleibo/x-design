@@ -202,5 +202,9 @@
   "pageNumber":"/halaman",
   "@pageNumber": {
     "description": "页数"
+  },
+  "pleaseOpenLocationService": "Silakan Buka Layanan Lokasi",
+  "@pleaseOpenLocationService": {
+    "description": "请开启定位服务"
   }
 }

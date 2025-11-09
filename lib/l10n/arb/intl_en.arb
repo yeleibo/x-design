@@ -204,5 +204,9 @@
   "pageNumber":"/page",
   "@pageNumber": {
     "description": "页数"
+  },
+  "pleaseOpenLocationService": "Please open location service",
+  "@pleaseOpenLocationService": {
+    "description": "请开启定位服务"
   }
 }

@@ -394,6 +394,12 @@ abstract class XDLocalizations {
   /// In en, this message translates to:
   /// **'/page'**
   String get pageNumber;
+
+  /// 请开启定位服务
+  ///
+  /// In en, this message translates to:
+  /// **'Please open location service'**
+  String get pleaseOpenLocationService;
 }
 
 class _XDLocalizationsDelegate extends LocalizationsDelegate<XDLocalizations> {

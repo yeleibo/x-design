@@ -23,7 +23,7 @@ class XDMyLocationController extends ChangeNotifier {
   XDMyLocationController({this.isAutoMoveToMapCenter = true,required this.mapController, this.mapCode = ''}) {
     Permission.location.serviceStatus.then((value) {
         if(value!=ServiceStatus.enabled){
-          message.info(content: "please open location service");
+          message.info(content: XDLocalizations.of(xdContext).pleaseOpenLocationService);
         }
     });
 
