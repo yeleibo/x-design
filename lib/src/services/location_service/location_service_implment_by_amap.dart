@@ -22,6 +22,12 @@ class LocationServiceImplementByAMap with LocationBase implements LocationServic
   @override
   Future<bool> init() async {
     if(inited)return true;
+    //定位服务检查
+    Permission.location.serviceStatus.then((value) {
+      if(value!=ServiceStatus.enabled){
+        message.info(content: XDLocalizations.of(xdContext).pleaseOpenLocationService);
+      }
+    });
     // 定位权限检查
    var locationPermission= await Permission.location.status;
    if(locationPermission!= PermissionStatus.granted){

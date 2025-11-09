@@ -21,11 +21,7 @@ class XDMyLocationController extends ChangeNotifier {
   StreamSubscription? locationChangListen;
   StreamSubscription? mapChangListen;
   XDMyLocationController({this.isAutoMoveToMapCenter = true,required this.mapController, this.mapCode = ''}) {
-    Permission.location.serviceStatus.then((value) {
-        if(value!=ServiceStatus.enabled){
-          message.info(content: XDLocalizations.of(xdContext).pleaseOpenLocationService);
-        }
-    });
+
 
     //监听我的地址定位变化
     locationChangListen=  locationService.onLocationChange().listen((position) {
