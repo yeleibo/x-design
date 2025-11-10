@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../utils/image_util.dart';
 
@@ -19,6 +20,9 @@ class XDImageWidget extends StatelessWidget {
   final String? package;
   ///是否可以放大查看
   final bool enableEnlargeView;
+  ///SVG颜色
+  final Color? color;
+
   const XDImageWidget(
       {Key? key,
       this.imagePath,
@@ -30,14 +34,63 @@ class XDImageWidget extends StatelessWidget {
       this.isRadius = true,
       this.radiusNum = 4.0,
         this.alignment=Alignment.center,
-      this.package,this.enableEnlargeView=false})
+      this.package,this.enableEnlargeView=false,
+      this.color})
       : assert(imagePath != null || imageBytes != null),
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Widget image = const SizedBox();
-    if (imageBytes != null) {
+
+    // 检查是否为SVG文件
+    if (imagePath != null && isSvgImage(imagePath!)) {
+      if (isNetWorkImg(imagePath!)) {
+        image = SvgPicture.network(
+          imagePath!,
+          width: width,
+          height: height,
+          fit: fit ?? BoxFit.contain,
+          colorFilter: color != null ? ColorFilter.mode(color!, BlendMode.srcIn) : null,
+          alignment: alignment,
+        );
+      } else if (isAssetsImg(imagePath!)) {
+        image = SvgPicture.asset(
+          imagePath!,
+          width: width,
+          height: height,
+          fit: fit ?? BoxFit.contain,
+          colorFilter: color != null ? ColorFilter.mode(color!, BlendMode.srcIn) : null,
+          alignment: alignment,
+          package: package,
+        );
+      } else if (File(imagePath!).existsSync()) {
+        image = SvgPicture.file(
+          File(imagePath!),
+          width: width,
+          height: height,
+          fit: fit ?? BoxFit.contain,
+          colorFilter: color != null ? ColorFilter.mode(color!, BlendMode.srcIn) : null,
+          alignment: alignment,
+        );
+      } else {
+        image = imageNotExistWidget != null
+            ? Container(
+                decoration: BoxDecoration(
+                    color: Colors.black26.withOpacity(0.1),
+                    border: Border.all(
+                        color: Colors.black.withOpacity(0.2), width: 0.3)),
+                child: Image.asset(
+                  'assets/image_not_exit.png',
+                  alignment: alignment,
+                  width: width,
+                  height: height,
+                  fit: fit,
+                ),
+              )
+            : imageNotExistWidget??SizedBox();
+      }
+    } else if (imageBytes != null) {
       image = Image.memory(
         alignment: alignment,
         imageBytes!,
@@ -200,6 +253,11 @@ class XDImageWidget extends StatelessWidget {
   /// 判断是否资源图片
   bool isAssetsImg(String img) {
     return img.startsWith('asset') || img.startsWith('assets');
+  }
+
+  /// 判断是否SVG图片
+  bool isSvgImage(String img) {
+    return img.toLowerCase().endsWith('.svg');
   }
 }
 
