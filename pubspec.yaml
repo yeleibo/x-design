@@ -20,7 +20,7 @@ dependencies:
   permission_handler: ^12.0.1
   location: ^8.0.0
   #定位
-  geolocator: ^14.0.0
+#  geolocator: ^14.0.0
 
   #指南针
   flutter_compass: ^0.8.1
