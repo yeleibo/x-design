@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_datepicker/datepicker.dart';
+import 'package:omni_datetime_picker/omni_datetime_picker.dart';
 import 'package:x_design/src/utils/extension/date_time_extension.dart';
 import '../button/xd_clear_button.dart';
+
+// Export OmniDateTimePickerType as DatePickerType
+export 'package:omni_datetime_picker/omni_datetime_picker.dart'
+    show OmniDateTimePickerType;
+
+// Type alias for easier usage
+typedef DatePickerType = OmniDateTimePickerType;
 
 class XDDatePicker extends FormField<DateTime> {
   ///是否启用
@@ -9,13 +16,13 @@ class XDDatePicker extends FormField<DateTime> {
 
   ///值改变时的回调方法
   final ValueChanged<DateTime?>? onChanged;
-  final XDDatePickerType xdDatePickerType;
+  final DatePickerType type;
   XDDatePicker(
       {Key? key,
       this.disabled = false,
       this.onChanged,
       DateTime? initialValue,
-      this.xdDatePickerType = XDDatePickerType.day})
+      this.type = DatePickerType.date})
       : super(
             key: key,
             initialValue: initialValue,
@@ -47,42 +54,34 @@ class XDInputDatetimeState extends FormFieldState<DateTime> {
   XDDatePicker get inputDatetime => super.widget as XDDatePicker;
 
   Future<void> _showTimePicker(BuildContext context) async {
-    var result = await showDialog(
+    DateTime? result = await showOmniDateTimePicker(
       context: context,
-      useRootNavigator: false,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          // title: Text('Select Date'),
-          content: Container(
-            width: 300,
-            height: 300,
-            child: SfDateRangePicker(
-              view: inputDatetime.xdDatePickerType == XDDatePickerType.year
-                  ? DateRangePickerView.decade
-                  : inputDatetime.xdDatePickerType == XDDatePickerType.month
-                      ? DateRangePickerView.year
-                      : DateRangePickerView.month,
-              selectionMode: DateRangePickerSelectionMode.single,
-              showActionButtons: true,
-              initialSelectedDate: value,
-              showNavigationArrow: true,
-              allowViewNavigation:
-                  inputDatetime.xdDatePickerType == XDDatePickerType.day
-                      ? true
-                      : false,
-              headerStyle: const DateRangePickerHeaderStyle(),
-              confirmText: '确认',
-              cancelText: '取消',
-              onSubmit: (value) {
-                Navigator.of(context).pop(value);
-              },
-              onCancel: () {
-                Navigator.of(context).pop();
-              },
+      type: inputDatetime.type,
+      initialDate: value ?? DateTime.now(),
+      firstDate: DateTime(1900),
+      lastDate: DateTime(2100),
+      is24HourMode: true,
+      isShowSeconds: false,
+      minutesInterval: 1,
+      secondsInterval: 1,
+      borderRadius: const BorderRadius.all(Radius.circular(16)),
+      constraints: const BoxConstraints(
+        maxWidth: 350,
+        maxHeight: 650,
+      ),
+      transitionBuilder: (context, anim1, anim2, child) {
+        return FadeTransition(
+          opacity: anim1.drive(
+            Tween(
+              begin: 0,
+              end: 1,
             ),
           ),
+          child: child,
         );
       },
+      transitionDuration: const Duration(milliseconds: 200),
+      barrierDismissible: true,
     );
 
     if (result != null) {
@@ -92,11 +91,16 @@ class XDInputDatetimeState extends FormFieldState<DateTime> {
   }
 
   String _getFormattedTime() {
-    return inputDatetime.xdDatePickerType == XDDatePickerType.year
-        ? value?.year.toString() ?? ''
-        : inputDatetime.xdDatePickerType == XDDatePickerType.month
-            ? value?.toStringOfMonth() ?? ''
-            : value?.toStringOfDay() ?? '';
+    if (value == null) return '';
+
+    switch (inputDatetime.type) {
+      case DatePickerType.date:
+        return value!.toStringOfDay();
+      case DatePickerType.time:
+        return '${value!.hour.toString().padLeft(2, '0')}:${value!.minute.toString().padLeft(2, '0')}';
+      case DatePickerType.dateAndTime:
+        return '${value!.toStringOfDay()} ${value!.hour.toString().padLeft(2, '0')}:${value!.minute.toString().padLeft(2, '0')}';
+    }
   }
 
   @override
@@ -214,34 +218,33 @@ class _DatesPickerState extends State<DatesPicker> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
-        var result = await showDialog<DateTime>(
+        DateTime? result = await showOmniDateTimePicker(
           context: context,
-          useRootNavigator: false,
-          builder: (BuildContext context) {
-            return AlertDialog(
-              // title: Text('Select Date'),
-              content: Container(
-                width: 300,
-                height: 300,
-                child: SfDateRangePicker(
-                  view: DateRangePickerView.month,
-                  selectionMode: DateRangePickerSelectionMode.single,
-                  showActionButtons: true,
-                  initialSelectedDate: DateTime.now(),
-                  showNavigationArrow: true,
-                  headerStyle: const DateRangePickerHeaderStyle(),
-                  confirmText: '确认',
-                  cancelText: '取消',
-                  onSubmit: (value) {
-                    Navigator.of(context).pop(value);
-                  },
-                  onCancel: () {
-                    Navigator.of(context).pop();
-                  },
+          initialDate: DateTime.now(),
+          firstDate: DateTime(1900),
+          lastDate: DateTime(2100),
+          is24HourMode: true,
+          isShowSeconds: false,
+          minutesInterval: 1,
+          secondsInterval: 1,
+          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          constraints: const BoxConstraints(
+            maxWidth: 350,
+            maxHeight: 650,
+          ),
+          transitionBuilder: (context, anim1, anim2, child) {
+            return FadeTransition(
+              opacity: anim1.drive(
+                Tween(
+                  begin: 0,
+                  end: 1,
                 ),
               ),
+              child: child,
             );
           },
+          transitionDuration: const Duration(milliseconds: 200),
+          barrierDismissible: true,
         );
         if (result != null) {
           selectedTimes.add(result);
@@ -310,8 +313,3 @@ class _DatesPickerState extends State<DatesPicker> {
   }
 }
 
-enum XDDatePickerType {
-  year,
-  month,
-  day,
-}

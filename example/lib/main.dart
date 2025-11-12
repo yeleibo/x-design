@@ -44,12 +44,16 @@ class _HomePageState extends State<HomePage> {
               child: Text(
                 "测试token刷新",
               ),
-              onClick: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => TokenRefreshTest()));
-              })
+              onClick: () async{
+                await Future.delayed(Duration(seconds: 10));
+                // Navigator.push(
+                //     context,
+                //     MaterialPageRoute(
+                //         builder: (context) => TokenRefreshTest()));
+              }),
+          XDDatePicker(onChanged: (v){
+            message.info(content: v.toString());
+          },type:DatePickerType.time)
         ],
       ),
     );

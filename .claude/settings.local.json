@@ -8,9 +8,20 @@
       "Bash(flutter analyze:*)",
       "Bash(dir:*)",
       "Bash(flutter pub run build_runner build:*)",
-      "Bash(flutter gen-l10n:*)"
+      "Bash(flutter gen-l10n:*)",
+      "WebSearch",
+      "WebFetch(domain:pub.dev)",
+      "Bash(flutter pub get:*)",
+      "Bash(git filter-branch:*)"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "FigmaMCP",
+    "Context7MCP",
+    "github",
+    "DartMcpServer"
+  ]
 }
