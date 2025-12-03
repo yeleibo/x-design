@@ -76,7 +76,7 @@ class _XDListState<T, Q extends XDPaginationQueryParam>
         // queryParam.current = 1;
         var nextPageData = await widget.fetchData(queryParam);
         data = nextPageData.data;
-        total = nextPageData.totalCount;
+        total = nextPageData.total;
         setState(() {});
       },
       onLoad: () async {
@@ -87,7 +87,7 @@ class _XDListState<T, Q extends XDPaginationQueryParam>
         queryParam.pageIndex = ((data?.length ?? 0) ~/ queryParam.pageSize);
         // queryParam.current = ((data?.length ?? 0) ~/ queryParam.pageSize);
         var nextPageData = await widget.fetchData(queryParam);
-        total = nextPageData.totalCount;
+        total = nextPageData.total;
         if (data == null) {
           data = nextPageData.data;
         } else {

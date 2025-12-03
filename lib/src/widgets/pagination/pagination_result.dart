@@ -6,13 +6,13 @@ import 'package:json_annotation/json_annotation.dart';
 class XDPaginationResult<T> {
   final int pageIndex;
   final int? pageSize;
-  final int totalCount;
+  final int total;
   final List<T> data;
 
   const XDPaginationResult(
       {this.pageSize,
        this.pageIndex=0,
-       this.totalCount=0,
+       this.total=0,
        this.data=const []});
 
 
@@ -27,13 +27,13 @@ class XDPaginationResult<T> {
   XDPaginationResult<T> copyWith({
     int? pageIndex,
     int? pageSize,
-    int? totalCount,
+    int? total,
     List<T>? data,
   }) {
     return XDPaginationResult<T>(
       pageIndex: pageIndex ?? this.pageIndex,
       pageSize: pageSize ?? this.pageSize,
-      totalCount: totalCount ?? this.totalCount,
+      total: total ?? this.total,
       data: data ?? this.data,
     );
   }
@@ -46,7 +46,7 @@ XDPaginationResult<T> _$PaginationResultFromJson<T>(
     XDPaginationResult<T>(
       pageSize: json['pageSize'] as int?,
       pageIndex: json['pageIndex'] as int? ?? 0,
-      totalCount: json['totalCount'] as int? ?? 0,
+      total: json['total'] as int? ?? 0,
       data:
       (json['data'] as List<dynamic>?)?.map(fromJsonT).toList() ?? const [],
     );

@@ -9,7 +9,7 @@ class XDTablePaginationConfig{
 
   factory XDTablePaginationConfig.withPaginationResult(XDPaginationResult? paginationResult){
     return XDTablePaginationConfig(
-        total: paginationResult?.totalCount ?? 0,
+        total: paginationResult?.total ?? 0,
         current: (paginationResult?.pageIndex ?? 0) + 1,
        pageSize: paginationResult?.pageSize??10
     );

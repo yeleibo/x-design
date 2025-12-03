@@ -12,7 +12,8 @@
       "WebSearch",
       "WebFetch(domain:pub.dev)",
       "Bash(flutter pub get:*)",
-      "Bash(git filter-branch:*)"
+      "Bash(git filter-branch:*)",
+      "mcp__DartMcpServer__hover"
     ],
     "deny": [],
     "ask": []

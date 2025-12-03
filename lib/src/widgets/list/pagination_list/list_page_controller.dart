@@ -205,8 +205,8 @@ class XDListPageController<T, Q extends XDPaginationQueryParam>
     if (_state.status == XDFetchDataStatus.fetchingData) {
       return;
     }
-    if (_state.data?.totalCount != null &&
-        _state.data?.totalCount == _state.data?.data.length) {
+    if (_state.data?.total != null &&
+        _state.data?.total == _state.data?.data.length) {
       _state.status = XDFetchDataStatus.fetchDataOver;
       _updateState(_state.copyWith(status: _state.status));
     } else {
