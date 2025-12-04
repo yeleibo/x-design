@@ -1,4 +1,6 @@
 
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +8,19 @@ import 'package:get_it/get_it.dart';
 import 'package:path/path.dart';
 
 import '../../../xd_design.dart';
+
+// 新增的辅助函数
+String _parseFileUrl(String url) {
+  if (url.startsWith('[')) {
+    try {
+      var list = jsonDecode(url) as List;
+      if (list.isNotEmpty) {
+        return list[0]['url'] ?? '';
+      }
+    } catch (_) {}
+  }
+  return url;
+}
 
 ///web端不能上传大文件，如何想要web端实现，参考https://github.com/warjeh/flutter_web_upload
 class XDFileUpload extends StatefulWidget {
@@ -216,10 +231,11 @@ class _XDFileUploadState extends State<XDFileUpload> {
                         onPressed: () async {
                           var baseUrl =
                               GetIt.instance.get<Dio>().options.baseUrl;
+                          var fileUrl = _parseFileUrl(e.url);
                           XDFileUtil.viewFile(
-                            filePath: baseUrl+e.url,
+                            filePath: baseUrl + fileUrl,
                             context: context,
-                            fileType: e.url.getFileType(),
+                            fileType: fileUrl.getFileType(),
                             fileName: e.name,
                           );
                         },
@@ -232,8 +248,9 @@ class _XDFileUploadState extends State<XDFileUpload> {
                           onPressed: () async {
                             var baseUrl =
                                 GetIt.instance.get<Dio>().options.baseUrl;
+                            var fileUrl = _parseFileUrl(e.url);
                             await XDFileUtil.downloadFile(
-                                fileUri: Uri.parse(join(baseUrl, e.url)),
+                                fileUri: Uri.parse(join(baseUrl, fileUrl)),
                                 fileName: e.name ?? '');
                           },
                           icon: Icon(

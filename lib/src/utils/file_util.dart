@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
@@ -146,6 +148,15 @@ class XDFileUtil {
       Uint8List? fileBytes,
       String? fileName}) {
     assert(filePath != null || fileBytes != null);
+    if (filePath != null && filePath.startsWith('[')) {
+      try {
+        var list = jsonDecode(filePath) as List;
+        if (list.isNotEmpty) {
+          filePath = list[0]['url'];
+        }
+      } catch (_) {}
+    }
+
     if (fileType.toLowerCase() == "png" ||
         fileType.toLowerCase() == "jpg" ||
         fileType.toLowerCase() == "jpeg") {
